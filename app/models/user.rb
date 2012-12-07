@@ -1,9 +1,6 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :image_url, :name, :nric, :password
+  attr_accessible :email, :name, :nric, :password
   validates :email, :name, :nric, :password, :presence => true
   validates :nric, :email, :uniqueness => true
-  validates :image_url, :format => {
-	:with => %r{|\.(gif|jpg|png)$}i,
-	:message => 'must be a URL for GIF, JPG or PNG image.'
-	}
+  validates :email, :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
 end

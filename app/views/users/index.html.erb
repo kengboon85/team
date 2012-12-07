@@ -6,7 +6,6 @@
     <th>Nric</th>
     <th>Password</th>
     <th>Email</th>
-    <th>Image url</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,7 +17,6 @@
     <td><%= user.nric %></td>
     <td><%= user.password %></td>
     <td><%= user.email %></td>
-    <td><%= user.image_url %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
