@@ -1,0 +1,10 @@
+<h1>Organization#index</h1>
+<% if notice %>
+<p id="notice" ><%= notice %></p>
+<% end %>
+<h1>Welcome Student</h1>
+<% @users.each do |user| %>
+<div class="entry" >
+<%= user.name %>
+</div>
+<% end %>
