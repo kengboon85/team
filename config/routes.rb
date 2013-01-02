@@ -1,4 +1,6 @@
 Team::Application.routes.draw do
+  resources :user_roles
+
   get "organization/index"
 
   resources :roles

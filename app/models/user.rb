@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+	has_many :user_roles, :dependent => :destroy
+	
   attr_accessible :email, :name, :nric, :password
   validates :email, :name, :nric, :password, :presence => true
   validates :nric, :email, :uniqueness => true
